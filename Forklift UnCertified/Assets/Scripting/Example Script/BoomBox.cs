@@ -28,25 +28,21 @@ public class BoomBox : Box
     
     void Update()
     {
-        if (isHeld && timer => 0f)
-        {
-            timer = timer - Time.deltaTime;
-        }
-        else
-        {
-            timer = 0;
-        }
+      if (isHeld == true && timer >= 0f)
+      {
+          timer = timer - Time.deltaTime;
+      }
+    
 
-        if(isHeld == false && timer <= maxTimer)
-        {
-            timer = timer + Time.deltaTime;
-        }
-        else
-        {
-            timer = maxTimer;
-        }
+      if (isHeld == false && timer <= maxTimer)
+      {
+          timer = timer + Time.deltaTime;
+      }
+   
 
+      
     }
-    // why no work?
 
+    // why no work?
+    
 }
